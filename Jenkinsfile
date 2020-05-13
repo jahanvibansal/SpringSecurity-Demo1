@@ -5,7 +5,8 @@ pipeline {
       steps {
         echo 'building'
         tool(name: 'maven', type: 'maven')
-        sh 'sh "${maven}/bin/mvn package"'
+        sh '''#!/bin/bash -xv
+mvn package'''
       }
     }
 
