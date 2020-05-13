@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'building'
-        tool 'maven'
+        tool(name: 'maven', type: 'maven')
         sh 'mvn package'
       }
     }
